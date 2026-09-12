@@ -52,15 +52,20 @@ function TechnologyCard({ technology, onAdd, isAdded }: Props) {
       {/* Add Button */}
       {/* <button
         onClick={() => onAdd(technology)}
-        className="mt-5 w-full rounded-lg bg-gray-900 py-2.5 text-sm font-semibold text-white">
-        Add to Stack
+        disabled={isAdded}
+        className={`mt-5 w-full rounded-lg py-2.5 text-sm font-semibold transition ${isAdded
+            ? "cursor-not-allowed bg-gray-200 text-gray-500"
+            : "bg-gray-900 text-white hover:bg-gray-800"
+          }`}
+      >
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button> */}
+
       <button
   onClick={() => onAdd(technology)}
-  disabled={isAdded}
   className={`mt-5 w-full rounded-lg py-2.5 text-sm font-semibold transition ${
     isAdded
-      ? "cursor-not-allowed bg-gray-200 text-gray-500"
+      ? "cursor-pointer bg-gray-200 text-gray-600 hover:bg-gray-300"
       : "bg-gray-900 text-white hover:bg-gray-800"
   }`}
 >

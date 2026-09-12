@@ -7,6 +7,8 @@ import type { Technology } from "./types/technology";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Footer from "./components/footer";
+
 function App() {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
   const [stack, setStack] = useState<Technology[]>([]);
@@ -78,9 +80,6 @@ function App() {
 
   return (
     <div>
-
-      <ToastContainer position="top-right" />
-
       <Navbar />
       <Hero />
 
@@ -91,6 +90,9 @@ function App() {
         onRemove={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+      
+      <Footer />
+      <ToastContainer position="top-right" />
     </div>
   );
 }
