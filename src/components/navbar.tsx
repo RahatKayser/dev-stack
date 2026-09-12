@@ -22,7 +22,7 @@ function Navbar() {
           {/* Navigation Links */}
           <div className="flex items-center gap-8">
             <a
-              href="#"
+              href="#home"
               className="text-sm font-medium hover:text-pink-500"
             >
               Home
@@ -36,21 +36,21 @@ function Navbar() {
             </a>
 
             <a
-              href="#projects"
+              href="#"
               className="text-sm font-medium hover:text-pink-500"
             >
               Projects
             </a>
 
             <a
-              href="#about"
+              href="#"
               className="text-sm font-medium hover:text-pink-500"
             >
               About
             </a>
 
             <a
-              href="#contact"
+              href="#"
               className="text-sm font-medium hover:text-pink-500"
             >
               Contact
@@ -63,7 +63,7 @@ function Navbar() {
               Sign In
             </button>
 
-            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-5 py-2 text-sm font-semibold text-white">
+            <button className="brand-gradient rounded-full px-5 py-2 text-sm font-semibold text-white">
               Sign Up
             </button>
           </div>
@@ -99,7 +99,7 @@ function Navbar() {
               Sign In
             </button>
 
-            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-3 py-2 text-xs font-semibold text-white">
+            <button className="brand-gradient rounded-full px-3 py-2 text-xs font-semibold text-white">
               Sign Up
             </button>
           </div>

@@ -1,7 +1,7 @@
 import heroImage from "../assets/banner-stack.png";
 function Hero() {
   return (
-    <section className="bg-white">
+    <section id="home" className="bg-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-16 md:flex-row md:py-24">
 
         {/* Left Content */}
@@ -9,7 +9,7 @@ function Hero() {
 
           <h1 className="text-4xl font-bold leading-tight text-gray-900 md:text-6xl">
             Build Your Ideal
-            <span className="block bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
+            <span className="brand-gradient-text block">
               Development Stack
             </span>
           </h1>
@@ -21,7 +21,7 @@ function Hero() {
           {/* Buttons */}
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
 
-            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105">
+            <button className="brand-gradient rounded-full px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105">
               Explore Technologies
             </button>
 
