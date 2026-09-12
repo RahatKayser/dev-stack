@@ -2,9 +2,11 @@ import type { Technology } from "../types/technology";
 
 type Props = {
   technology: Technology;
+  onAdd: (technology: Technology) => void;
+  isAdded: boolean;
 };
 
-function TechnologyCard({ technology }: Props) {
+function TechnologyCard({ technology, onAdd, isAdded }: Props) {
   return (
     <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition">
 
@@ -48,9 +50,22 @@ function TechnologyCard({ technology }: Props) {
       </div>
 
       {/* Add Button */}
-      <button className="mt-5 w-full rounded-lg bg-gray-900 py-2.5 text-sm font-semibold text-white">
+      {/* <button
+        onClick={() => onAdd(technology)}
+        className="mt-5 w-full rounded-lg bg-gray-900 py-2.5 text-sm font-semibold text-white">
         Add to Stack
-      </button>
+      </button> */}
+      <button
+  onClick={() => onAdd(technology)}
+  disabled={isAdded}
+  className={`mt-5 w-full rounded-lg py-2.5 text-sm font-semibold transition ${
+    isAdded
+      ? "cursor-not-allowed bg-gray-200 text-gray-500"
+      : "bg-gray-900 text-white hover:bg-gray-800"
+  }`}
+>
+  {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+</button>
 
     </div>
   );
